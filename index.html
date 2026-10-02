@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🚢 Морской бой — Sib.Bear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Экран ожидания -->
+        <div id="screen-lobby" class="screen active">
+            <h1>🚢 Морской бой</h1>
+            <p class="subtitle">Sib.Bear Edition</p>
+            <div id="lobby-status">Подключение к серверу...</div>
+            <button id="btn-find-game" class="btn-main" disabled>⚓ Найти соперника</button>
+            <div id="lobby-info"></div>
+        </div>
+
+        <!-- Экран расстановки кораблей -->
+        <div id="screen-setup" class="screen">
+            <h2>📐 Расставьте корабли</h2>
+            <p id="setup-instruction">Нажмите на клетки поля, чтобы разместить корабль</p>
+            <div id="setup-ship-info"></div>
+            <div id="setup-grid-container">
+                <canvas id="setup-canvas" width="350" height="350"></canvas>
+            </div>
+            <div class="setup-controls">
+                <button id="btn-rotate" class="btn-secondary">🔄 Повернуть</button>
+                <button id="btn-auto-place" class="btn-secondary">🎲 Авто</button>
+                <button id="btn-ready" class="btn-main" disabled>✅ Готов!</button>
+            </div>
+        </div>
+
+        <!-- Экран боя -->
+        <div id="screen-battle" class="screen">
+            <div id="battle-status">Ожидание хода...</div>
+            <div id="battle-grids">
+                <div class="grid-section">
+                    <h3>Противник</h3>
+                    <canvas id="enemy-canvas" width="350" height="350"></canvas>
+                </div>
+                <div class="grid-section">
+                    <h3>Ваше поле</h3>
+                    <canvas id="own-canvas" width="350" height="350"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Экран результата -->
+        <div id="screen-result" class="screen">
+            <h1 id="result-title">🏆</h1>
+            <p id="result-text"></p>
+            <button id="btn-play-again" class="btn-main">🔄 Играть снова</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

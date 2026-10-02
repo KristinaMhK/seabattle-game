@@ -7,7 +7,7 @@ const COL_LABELS = ['А','Б','В','Г','Д','Е','Ж'];
 const SHIPS_CONFIG = [3, 2, 2, 1, 1, 1];
 
 // ⚠️ Замени на свою ссылку WebSocket-сервера на Render:
-const WS_URL = 'wss://seabattle-server-XXXX.onrender.com';
+const WS_URL = 'wss://seabattle-server-9rnv.onrender.com';
 
 // ==================== ЦВЕТА ====================
 const COLORS = {
